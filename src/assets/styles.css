@@ -1,0 +1,33 @@
+/* styles.css ou dans une section <style> dans un composant Vue */
+
+.toast-success {
+	background-color: #4caf50;
+	/* Couleur de fond pour les notifications de succès */
+	color: #fff;
+	/* Couleur du texte */
+}
+
+.toast-error {
+	background-color: #f44336;
+	/* Couleur de fond pour les notifications d'erreur */
+	color: #fff;
+	/* Couleur du texte */
+}
+
+.toast-info {
+	background-color: #2196f3;
+	/* Couleur de fond pour les notifications d'information */
+	color: #fff;
+	/* Couleur du texte */
+}
+
+/* Optionnel: Styles pour la barre de progression */
+.toast-progress {
+	background-color: #fff;
+	/* Couleur de la barre de progression */
+}
+
+.Vue-Toastification__toast--info {
+	background-color: #8d2614;
+	color: #fff;
+}

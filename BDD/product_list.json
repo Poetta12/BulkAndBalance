@@ -1,0 +1,780 @@
+[
+  {
+    "nom_id": 1,
+    "nom": "Blancs de poulet",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines"
+    ]
+  },
+  {
+    "nom_id": 2,
+    "nom": "Poitrine de dinde",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines"
+    ]
+  },
+  {
+    "nom_id": 3,
+    "nom": "Filet de saumon",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "poisson",
+    "type_apport": [
+      "proteines",
+      "graisses_saines",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 4,
+    "nom": "Thon en conserve (dans l'eau)",
+    "quantite_hebdo": "4 boîtes",
+    "conseille_pour_soir": true,
+    "type_aliment": "poisson",
+    "type_apport": [
+      "proteines",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 5,
+    "nom": "Oeufs",
+    "quantite_hebdo": "12",
+    "conseille_pour_soir": true,
+    "type_aliment": "oeuf",
+    "type_apport": [
+      "proteines",
+      "graisses_saines",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 6,
+    "nom": "Fromage cottage",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit laitier",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "calcium"
+    ]
+  },
+  {
+    "nom_id": 7,
+    "nom": "Yaourt grec nature",
+    "quantite_hebdo": "1 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit laitier",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "calcium"
+    ]
+  },
+  {
+    "nom_id": 8,
+    "nom": "Tofu",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit végétal",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "fer"
+    ]
+  },
+  {
+    "nom_id": 9,
+    "nom": "Lentilles",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légumineuse",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "fibres",
+      "fer"
+    ]
+  },
+  {
+    "nom_id": 10,
+    "nom": "Pois chiches",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légumineuse",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "fibres",
+      "fer"
+    ]
+  },
+  {
+    "nom_id": 11,
+    "nom": "Quinoa",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "fibres",
+      "fer"
+    ]
+  },
+  {
+    "nom_id": 12,
+    "nom": "Riz brun",
+    "quantite_hebdo": "1 kg",
+    "conseille_pour_soir": false,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 13,
+    "nom": "Avoine",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 14,
+    "nom": "Patates douces",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 15,
+    "nom": "Pâtes de blé complet",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": false,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 16,
+    "nom": "Pain complet",
+    "quantite_hebdo": "1 pain",
+    "conseille_pour_soir": false,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 17,
+    "nom": "Flocons d’avoine",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 18,
+    "nom": "Avocats",
+    "quantite_hebdo": "3-4",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "graisses_saines",
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 19,
+    "nom": "Noix (amandes, noix, noisettes)",
+    "quantite_hebdo": "300 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "oléagineux",
+    "type_apport": [
+      "graisses_saines",
+      "proteines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 20,
+    "nom": "Graines de chia",
+    "quantite_hebdo": "200 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "graines",
+    "type_apport": [
+      "graisses_saines",
+      "fibres",
+      "proteines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 21,
+    "nom": "Huile d'olive extra vierge",
+    "quantite_hebdo": "250 ml",
+    "conseille_pour_soir": true,
+    "type_aliment": "huile",
+    "type_apport": [
+      "graisses_saines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 22,
+    "nom": "Beurre d'amande",
+    "quantite_hebdo": "200 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "oléagineux",
+    "type_apport": [
+      "graisses_saines",
+      "proteines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 23,
+    "nom": "Graines de lin",
+    "quantite_hebdo": "200 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "graines",
+    "type_apport": [
+      "graisses_saines",
+      "fibres",
+      "proteines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 24,
+    "nom": "Épinards",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 25,
+    "nom": "Brocoli",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 26,
+    "nom": "Chou frisé",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 27,
+    "nom": "Poivrons",
+    "quantite_hebdo": "4",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 28,
+    "nom": "Tomates",
+    "quantite_hebdo": "7",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 29,
+    "nom": "Concombres",
+    "quantite_hebdo": "3",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 30,
+    "nom": "Carottes",
+    "quantite_hebdo": "1 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 31,
+    "nom": "Bananes",
+    "quantite_hebdo": "7",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "glucides",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 32,
+    "nom": "Baies (fraises, myrtilles, framboises)",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 33,
+    "nom": "Oranges",
+    "quantite_hebdo": "4",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 34,
+    "nom": "Kiwi",
+    "quantite_hebdo": "4",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 35,
+    "nom": "Lait d'amande ou lait de vache",
+    "quantite_hebdo": "1 litre",
+    "conseille_pour_soir": true,
+    "type_aliment": "boisson",
+    "type_apport": [
+      "proteines",
+      "glucides"
+    ]
+  },
+  {
+    "nom_id": 36,
+    "nom": "Épices (curcuma, paprika, cumin, poivre noir)",
+    "quantite_hebdo": "Quantité selon besoin",
+    "conseille_pour_soir": true,
+    "type_aliment": "épice",
+    "type_apport": [
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 37,
+    "nom": "Sauces légères (sauce soja faible en sodium, vinaigre balsamique)",
+    "quantite_hebdo": "Quantité selon besoin",
+    "conseille_pour_soir": true,
+    "type_aliment": "sauce",
+    "type_apport": []
+  },
+  {
+    "nom_id": 38,
+    "nom": "Bouillon de légumes",
+    "quantite_hebdo": "1 litre",
+    "conseille_pour_soir": true,
+    "type_aliment": "bouillon",
+    "type_apport": []
+  },
+  {
+    "nom_id": 39,
+    "nom": "Protéine en poudre (whey, caséine ou végétale)",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": [
+      "proteines"
+    ]
+  },
+  {
+    "nom_id": 40,
+    "nom": "BCAA",
+    "quantite_hebdo": "Quantité selon les recommandations du produit",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": [
+      "proteines"
+    ]
+  },
+  {
+    "nom_id": 41,
+    "nom": "Créatine",
+    "quantite_hebdo": "Quantité selon les recommandations du produit",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": []
+  },
+  {
+    "nom_id": 42,
+    "nom": "Viande de boeuf maigre",
+    "quantite_hebdo": "1 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines",
+      "minéraux"
+    ]
+  },
+  {
+    "nom_id": 43,
+    "nom": "Poisson blanc (merlan, colin)",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "poisson",
+    "type_apport": [
+      "proteines",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 44,
+    "nom": "Crevettes",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "poisson",
+    "type_apport": [
+      "proteines",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 45,
+    "nom": "Protéines végétales (comme les protéines de pois)",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": [
+      "proteines"
+    ]
+  },
+  {
+    "nom_id": 46,
+    "nom": "Tempeh",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit végétal",
+    "type_apport": [
+      "proteines",
+      "glucides"
+    ]
+  },
+  {
+    "nom_id": 47,
+    "nom": "Ricotta",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit laitier",
+    "type_apport": [
+      "proteines",
+      "glucides"
+    ]
+  },
+  {
+    "nom_id": 48,
+    "nom": "Muesli sans sucre ajouté",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres"
+    ]
+  },
+  {
+    "nom_id": 49,
+    "nom": "Patates",
+    "quantite_hebdo": "1 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "glucides",
+      "fibres"
+    ]
+  },
+  {
+    "nom_id": 50,
+    "nom": "Orge",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres"
+    ]
+  },
+  {
+    "nom_id": 51,
+    "nom": "Bulgur",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "céréale",
+    "type_apport": [
+      "glucides",
+      "fibres"
+    ]
+  },
+  {
+    "nom_id": 52,
+    "nom": "Chou-fleur",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 53,
+    "nom": "Courgettes",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 54,
+    "nom": "Aubergines",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 55,
+    "nom": "Poireaux",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 56,
+    "nom": "Champignons",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "légume",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 57,
+    "nom": "Poires",
+    "quantite_hebdo": "7",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 58,
+    "nom": "Pêches",
+    "quantite_hebdo": "4",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 59,
+    "nom": "Mangues",
+    "quantite_hebdo": "4",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 60,
+    "nom": "Grenades",
+    "quantite_hebdo": "2",
+    "conseille_pour_soir": true,
+    "type_aliment": "fruit",
+    "type_apport": [
+      "fibres",
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 61,
+    "nom": "Lait de coco",
+    "quantite_hebdo": "1 litre",
+    "conseille_pour_soir": true,
+    "type_aliment": "boisson",
+    "type_apport": [
+      "graisses_saines"
+    ]
+  },
+  {
+    "nom_id": 62,
+    "nom": "Sirop d'érable",
+    "quantite_hebdo": "250 ml",
+    "conseille_pour_soir": false,
+    "type_aliment": "édulcorant",
+    "type_apport": [
+      "glucides"
+    ]
+  },
+  {
+    "nom_id": 63,
+    "nom": "Herbes fraîches (basilic, coriandre, persil)",
+    "quantite_hebdo": "Quantité selon besoin",
+    "conseille_pour_soir": true,
+    "type_aliment": "herbe",
+    "type_apport": [
+      "vitamines",
+      "antioxydants"
+    ]
+  },
+  {
+    "nom_id": 64,
+    "nom": "Miel",
+    "quantite_hebdo": "250 g",
+    "conseille_pour_soir": false,
+    "type_aliment": "édulcorant",
+    "type_apport": [
+      "glucides"
+    ]
+  },
+  {
+    "nom_id": 65,
+    "nom": "Jus de citron",
+    "quantite_hebdo": "500 ml",
+    "conseille_pour_soir": true,
+    "type_aliment": "boisson",
+    "type_apport": [
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 66,
+    "nom": "Yaourt nature",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "produit laitier",
+    "type_apport": [
+      "proteines",
+      "glucides",
+      "calcium"
+    ]
+  },
+  {
+    "nom_id": 67,
+    "nom": "Sauce tomate sans sucre ajouté",
+    "quantite_hebdo": "500 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "condiment",
+    "type_apport": [
+      "fibres",
+      "vitamines"
+    ]
+  },
+  {
+    "nom_id": 68,
+    "nom": "Oméga-3 (huile de poisson ou algues)",
+    "quantite_hebdo": "Quantité selon les recommandations du produit",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": [
+      "graisses_saines"
+    ]
+  },
+  {
+    "nom_id": 69,
+    "nom": "Multivitamines",
+    "quantite_hebdo": "Quantité selon les recommandations du produit",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": []
+  },
+  {
+    "nom_id": 70,
+    "nom": "Glutamine",
+    "quantite_hebdo": "Quantité selon les recommandations du produit",
+    "conseille_pour_soir": true,
+    "type_aliment": "supplément",
+    "type_apport": []
+  }
+]
