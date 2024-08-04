@@ -6,6 +6,7 @@
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">Recettes</RouterLink>
         </nav>
       </div>
     </header>
@@ -24,14 +25,19 @@
   height: 100%;
 }
 header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   line-height: 1.5;
   max-height: 100vh;
   height: 20vh;
+  margin-bottom: 1rem;
 }
 
 .logo {
+  justify-self: center;
   display: block;
-  margin: 0 auto 2rem;
+  margin: auto;
 }
 
 nav {

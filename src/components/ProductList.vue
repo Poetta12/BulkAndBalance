@@ -215,8 +215,7 @@ ul {
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  color: #222;
   border: none;
   border-radius: 4px;
   padding: 10px 15px;
@@ -224,11 +223,6 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-button:hover {
-  background-color: #0056b3;
-}
-
 .pagination {
   display: flex;
   justify-content: center;

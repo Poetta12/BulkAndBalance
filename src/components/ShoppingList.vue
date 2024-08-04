@@ -176,11 +176,6 @@ button {
   text-align: center;
 }
 
-button:hover {
-  background-color: #c82333;
-  transform: translateY(-2px);
-}
-
 /* Liste des éléments */
 ul {
   padding: 0;

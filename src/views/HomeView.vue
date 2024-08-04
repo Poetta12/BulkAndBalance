@@ -21,11 +21,11 @@ const navigateTo = (section) => {
   <div class="home">
     <header>
       <h1>
-        Bienvenue <br />
-        sur <br />
-        <span>Bulk & Balance</span>
+        Bienvenue sur <br />
+        <span class="logo-police">Bulk & Balance</span>
       </h1>
-      <p>Organisez vos repas et gérez vos courses.</p>
+      <p>Organisez vos repas et gérez vos courses</p>
+      <p>pour obtenir les resultats souhaités.</p>
     </header>
 
     <main>
@@ -61,16 +61,28 @@ const navigateTo = (section) => {
       <button @click="navigateTo('shopping')">Courses</button>
       <button @click="navigateTo('nutrition')">Nutrition</button>
     </footer>
+    <div id="credits">
+      <p>created by poetta@poettatech ®© | 2024</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.logo-police {
+  font-family: 'belleza';
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+#credits {
+  text-align: center;
+  font-size: 0.7rem;
+}
 .home {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  height: 80vh;
+  height: 78vh;
   font-family: Arial, sans-serif;
 }
 
@@ -130,16 +142,11 @@ footer {
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  color: #222;
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
 }
 </style>

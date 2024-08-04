@@ -4,7 +4,6 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
-import { v4 as uuidv4 } from 'uuid'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -42,9 +41,7 @@ app.post('/api/add-to-shopping-list', (req, res) => {
     }
 
     const shoppingList = data ? JSON.parse(data) : []
-
-    // Ajouter le produit avec un UUID unique
-    const newItem = { ...item, id: uuidv4() }
+    const newItem = { ...item }
 
     // Ajouter le produit à la liste sans modifier les quantités
     shoppingList.push(newItem)
