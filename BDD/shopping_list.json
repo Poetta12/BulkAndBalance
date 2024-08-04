@@ -1,13 +1,1 @@
-[
-  {
-    "nom_id": 1,
-    "nom": "Blancs de poulet",
-    "quantite_hebdo": "1.4 kg",
-    "conseille_pour_soir": true,
-    "type_aliment": "viande",
-    "type_apport": [
-      "proteines"
-    ],
-    "id": "274a4d48-cdf4-4ef5-80f9-8fdec567a8f0"
-  }
-]
+[]

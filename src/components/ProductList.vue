@@ -1,7 +1,5 @@
 <template>
   <section class="product-list">
-    <div v-if="notification.visible" class="notification">{{ notification.message }}</div>
-
     <h2>Liste des Produits</h2>
 
     <div class="filters">
@@ -67,7 +65,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
-import { useEventBus } from '@vueuse/core'
+import { useEventBus } from '@vueuse/core' // Assurez-vous d'avoir @vueuse/core installé
+import { v4 as uuidv4 } from 'uuid'
 
 const products = ref([])
 const searchQuery = ref('')
@@ -75,11 +74,6 @@ const selectedType = ref('')
 const selectedApport = ref('')
 const currentPage = ref(1)
 const itemsPerPage = 4
-
-const notification = ref({
-  visible: false,
-  message: ''
-})
 
 const uniqueTypes = computed(() => {
   const types = new Set(products.value.map((product) => product.type_aliment))
@@ -114,18 +108,11 @@ const paginatedProducts = computed(() => {
 
 const addToShoppingList = async (product) => {
   try {
-    await axios.post('http://localhost:3000/api/add-to-shopping-list', {
-      item: { ...product } // Envoyer les données du produit sans modification
-    })
+    const uuid = uuidv4() // Générer un UUID unique pour chaque produit ajouté
 
-    console.log('Produit ajouté:', product.nom)
-    notification.value = {
-      visible: true,
-      message: `${product.nom} a été ajouté à la liste de courses.`
-    }
-    setTimeout(() => {
-      notification.value.visible = false
-    }, 3000)
+    await axios.post('http://localhost:3000/api/add-to-shopping-list', {
+      item: { ...product, uuid } // Ajouter le UUID au produit, ne pas modifier la quantité
+    })
 
     // Émettre un événement
     useEventBus('shoppingListUpdated').emit()

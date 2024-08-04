@@ -1,23 +1,21 @@
 <template>
   <section class="shopping-list">
     <h2>Liste de Courses</h2>
-    <div class="total-quantity">Total: {{ totalQuantity }}</div>
-
     <ul>
-      <li v-for="item in shoppingList" :key="item.id" class="shopping-item">
-        <strong>{{ item.nom }}</strong>
-        <br />
-        Quantité Hebdo: {{ item.quantite_hebdo }}
-        <br />
-        Type: {{ item.type_aliment }}
-        <br />
-        Peut se consommer le soir: {{ item.conseille_pour_soir ? 'Oui' : 'Non' }}
-        <br />
-        Apports: {{ item.type_apport.join(', ') }}
-        <br />
-        Quantité Totale: {{ item.totalQuantite }}
-        <br />
-        <button @click="removeFromList(item)">Supprimer</button>
+      <li v-for="item in shoppingList" :key="item.nom_id" class="product-item">
+        <div class="quantity-container">
+          <span class="quantity total-quantity">Total: {{ item.totalQuantity }}</span>
+        </div>
+        <div class="product-content">
+          <h3>
+            {{ item.nom }}
+          </h3>
+          <p>Quantité Hebdo: {{ item.quantite_hebdo }}</p>
+          <p>Type: {{ item.type_aliment }}</p>
+          <p>Peut se consommer le soir: {{ item.conseille_pour_soir ? 'Oui' : 'Non' }}</p>
+          <p>Apports: {{ item.type_apport.join(', ') }}</p>
+          <button @click="removeFromList(item)">Supprimer</button>
+        </div>
       </li>
     </ul>
   </section>
@@ -34,18 +32,26 @@ const loadShoppingList = async () => {
   try {
     const response = await axios.get('http://localhost:3000/json/shopping_list.json')
     const data = response.data
-    const quantityMap = data.reduce((map, item) => {
-      if (!map[item.id]) {
-        map[item.id] = { ...item, totalQuantite: parseFloat(item.quantite_hebdo) }
+
+    // Compter le nombre d'occurrences de chaque nom_id
+    const countMap = data.reduce((map, item) => {
+      if (!map[item.nom_id]) {
+        // Initialiser un nouvel objet pour le produit
+        map[item.nom_id] = {
+          ...item,
+          occurrenceCount: 1 // Nombre d'occurrences initialisé à 1
+        }
       } else {
-        map[item.id].totalQuantite += parseFloat(item.quantite_hebdo)
+        // Incrémenter le nombre d'occurrences existant
+        map[item.nom_id].occurrenceCount += 1
       }
       return map
     }, {})
 
-    shoppingList.value = Object.values(quantityMap).map((item) => ({
+    shoppingList.value = Object.values(countMap).map((item) => ({
       ...item,
-      quantite_hebdo: item.totalQuantite.toFixed(2) + ' kg'
+      quantite_hebdo: item.quantite_hebdo, // Conserver la valeur d'origine
+      totalQuantity: item.occurrenceCount // Nombre d'occurrences
     }))
   } catch (error) {
     console.error('Erreur lors du chargement de la liste de courses:', error)
@@ -57,16 +63,14 @@ const removeFromList = async (item) => {
     await axios.post('http://localhost:3000/api/remove-from-shopping-list', {
       id: item.id
     })
-    shoppingList.value = shoppingList.value.filter((product) => product.id !== item.id)
+    loadShoppingList() // Recharger la liste après suppression
   } catch (error) {
     console.error('Erreur lors de la suppression du produit:', error)
   }
 }
 
 const totalQuantity = computed(() => {
-  return shoppingList.value
-    .reduce((total, item) => total + parseFloat(item.totalQuantite), 0)
-    .toFixed(2)
+  return shoppingList.value.reduce((total, item) => total + item.totalQuantity, 0)
 })
 
 onMounted(() => {
@@ -81,8 +85,39 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.product-item {
+  position: relative; /* Nécessaire pour le positionnement absolu des éléments enfants */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.quantity-container {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-content {
+  margin-top: 30px; /* Assurez-vous que le contenu n'est pas couvert par la quantité */
+}
+
+.total-quantity {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 ul {
   padding: 0;
+  list-style: none;
 }
 .shopping-list {
   padding: 10px;
