@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "nom_id": 2,
+    "nom": "Poitrine de dinde",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines"
+    ],
+    "uuid": "b71778a6-0936-4573-a0f4-f17815473a69",
+    "id": "902b8f66-cb44-4894-8cd4-3a77c8bdb9f2"
+  },
+  {
+    "nom_id": 3,
+    "nom": "Filet de saumon",
+    "quantite_hebdo": "700 g",
+    "conseille_pour_soir": true,
+    "type_aliment": "poisson",
+    "type_apport": [
+      "proteines",
+      "graisses_saines",
+      "vitamines"
+    ],
+    "uuid": "35b8cf05-7616-44be-85dd-f6865c657add",
+    "id": "602d8687-a304-44ce-82b0-f57a04953ee9"
+  },
+  {
+    "nom_id": 1,
+    "nom": "Blancs de poulet",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines"
+    ],
+    "uuid": "09d4510b-b955-41c2-b316-0104f94add4a",
+    "id": "ac2f63bb-2922-497f-b4ab-45e6fe7be3d2"
+  },
+  {
+    "nom_id": 1,
+    "nom": "Blancs de poulet",
+    "quantite_hebdo": "1.4 kg",
+    "conseille_pour_soir": true,
+    "type_aliment": "viande",
+    "type_apport": [
+      "proteines"
+    ],
+    "uuid": "0eaba265-963e-4573-8ebf-d0a538091e77",
+    "id": "f676e343-c700-4fa5-a5fd-338e064ab9ef"
+  }
+]

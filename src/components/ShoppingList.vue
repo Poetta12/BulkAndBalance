@@ -4,16 +4,23 @@
     <ul>
       <li v-for="item in shoppingList" :key="item.nom_id" class="product-item">
         <div class="quantity-container">
-          <span class="quantity total-quantity">Total: {{ item.totalQuantity }}</span>
+          <span class="quantity total-quantity">Qt: {{ item.totalQuantity }}</span>
         </div>
         <div class="product-content">
-          <h3>
-            {{ item.nom }}
-          </h3>
-          <p>Quantité Hebdo: {{ item.quantite_hebdo }}</p>
-          <p>Type: {{ item.type_aliment }}</p>
-          <p>Peut se consommer le soir: {{ item.conseille_pour_soir ? 'Oui' : 'Non' }}</p>
-          <p>Apports: {{ item.type_apport.join(', ') }}</p>
+          <h3>{{ item.nom }}</h3>
+          <p>
+            Quantité Hebdo: <span class="bold">{{ item.quantite_hebdo }}</span>
+          </p>
+          <p>
+            Type: <span class="bold">{{ item.type_aliment }}</span>
+          </p>
+          <p>
+            Peut se consommer le soir:
+            <span class="bold">{{ item.conseille_pour_soir ? 'Oui' : 'Non' }} </span>
+          </p>
+          <p>
+            Apports: <span class="bold">{{ item.type_apport.join(', ') }}</span>
+          </p>
           <button @click="removeFromList(item)">Supprimer</button>
         </div>
       </li>
@@ -22,10 +29,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import { useToast } from 'vue-toastification'
 import { useEventBus } from '@vueuse/core'
 
+const toast = useToast()
 const shoppingList = ref([])
 
 const loadShoppingList = async () => {
@@ -64,14 +73,16 @@ const removeFromList = async (item) => {
       id: item.id
     })
     loadShoppingList() // Recharger la liste après suppression
+
+    // Afficher une notification de succès
+    toast.info(`${item.nom} a été supprimé de la liste de courses.`)
   } catch (error) {
     console.error('Erreur lors de la suppression du produit:', error)
+
+    // Afficher une notification d'erreur
+    toast.error('Erreur lors de la suppression du produit.')
   }
 }
-
-const totalQuantity = computed(() => {
-  return shoppingList.value.reduce((total, item) => total + item.totalQuantity, 0)
-})
 
 onMounted(() => {
   loadShoppingList()
@@ -85,76 +96,95 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.product-item {
-  position: relative; /* Nécessaire pour le positionnement absolu des éléments enfants */
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+.bold {
+  font-weight: bold;
 }
-
-.quantity-container {
-  width: 100px;
-  position: absolute;
-  top: 0;
-  right: 0;
+/* Styles généraux pour la liste de courses */
+.shopping-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
-  padding: 5px;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.product-content {
-  margin-top: 30px; /* Assurez-vous que le contenu n'est pas couvert par la quantité */
-}
-
-.total-quantity {
-  font-size: 1.2em;
+/* Styles pour chaque élément de produit */
+.product-item {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 0 20px 20px;
   margin-bottom: 20px;
-  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
+.product-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Conteneur pour la quantité totale */
+.quantity-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f0f1f3;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.2em;
+}
+
+/* Contenu du produit */
+.product-content {
+  margin-top: 20px;
+}
+
+.product-content h3 {
+  font-size: 1.4em;
+  margin: 0 0 15px;
+  color: #343a40;
+}
+
+.product-content p {
+  margin: 8px 0;
+  color: #6c757d;
+}
+
+/* Bouton pour supprimer le produit */
+button {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Liste des éléments */
 ul {
   padding: 0;
   list-style: none;
-}
-.shopping-list {
-  padding: 10px;
-  position: relative; /* Ajouté pour le positionnement de la quantité totale */
-}
-
-.shopping-item {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
-
-.shopping-item button {
-  margin-top: 5px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f44336;
-  color: #fff;
-  cursor: pointer;
-}
-
-.shopping-item button:hover {
-  background-color: #c62828;
-}
-
-/* Style pour le total de la quantité */
-.total-quantity {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
 }
 </style>

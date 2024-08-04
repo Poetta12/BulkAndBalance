@@ -65,8 +65,12 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
-import { useEventBus } from '@vueuse/core' // Assurez-vous d'avoir @vueuse/core installé
+import { useToast } from 'vue-toastification'
 import { v4 as uuidv4 } from 'uuid'
+import { useEventBus } from '@vueuse/core'
+
+// Initialisation de toast
+const toast = useToast()
 
 const products = ref([])
 const searchQuery = ref('')
@@ -114,10 +118,14 @@ const addToShoppingList = async (product) => {
       item: { ...product, uuid } // Ajouter le UUID au produit, ne pas modifier la quantité
     })
 
-    // Émettre un événement
     useEventBus('shoppingListUpdated').emit()
+
+    // Afficher une notification
+    toast.success(`${product.nom} a été ajouté à la liste de courses.`)
   } catch (error) {
     console.error("Erreur lors de l'ajout du produit:", error)
+    // Afficher une notification d'erreur
+    toast.error("Erreur lors de l'ajout du produit.")
   }
 }
 

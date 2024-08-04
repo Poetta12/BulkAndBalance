@@ -28,6 +28,8 @@
 }
 
 .Vue-Toastification__toast--info {
-	background-color: #8d2614;
+	background-color: #e79908;
+	/* Couleur de fond pour les notifications d'information spécifique */
 	color: #fff;
+	/* Couleur du texte */
 }
